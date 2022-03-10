@@ -8,7 +8,7 @@ namespace ShoppingProject.Services.Interface
         Task<User> GetUser(int userId);
         Task<User> GetUserList();
         Task<User> AddUser();
-        Task<User> Update(int UserId);
-        Task<bool> Delete(int userId);
+        Task<User> UpdateUser(int userId);
+        Task<bool> DeleteUser(int userId);
     }
 }

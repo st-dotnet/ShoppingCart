@@ -1,8 +1,4 @@
 ﻿using ShoppingProject.Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ShoppingProject.Services.Interface
@@ -12,7 +8,7 @@ namespace ShoppingProject.Services.Interface
         Task<ProductCategory> GetProductCategory(int productCategoryId);
         Task<ProductCategory> GetProductCategoryList();
         Task<ProductCategory> AddProductCategory();
-        Task<ProductCategory> UpdateProductCategory();
+        Task<ProductCategory> UpdateProductCategory(int productCategoryId);
         Task<bool> DeleteProductCategory(int productCategoryId);
     }
 }
