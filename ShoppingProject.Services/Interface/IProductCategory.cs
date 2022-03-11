@@ -1,14 +1,23 @@
-﻿using ShoppingProject.Data.Entities;
-using System.Threading.Tasks;
+﻿using ShoopingProject.Services.DTOs;
+using System.Collections.Generic;
 
 namespace ShoppingProject.Services.Interface
 {
-  public  interface IProductCategory
+    public  interface IProductCategory
     {
-        Task<ProductCategory> GetProductCategory(int productCategoryId);
-        Task<ProductCategory> GetProductCategoryList();
-        Task<ProductCategory> AddProductCategory();
-        Task<ProductCategory> UpdateProductCategory(int productCategoryId);
-        Task<bool> DeleteProductCategory(int productCategoryId);
+        //get all product categories
+        List<ProductCategoryResponse> GetProductCategories();
+
+        //get product category by id
+        ProductCategoryResponse GetProductCategoryById(int categoryId);
+
+        //add product category
+        bool AddProductCategory(ProductCategoryRequest request);
+
+        //update product category
+        bool UpdateProductCategory(ProductCategoryRequest request);
+
+        //detele product category by category id
+        bool DeleteProductCategory(int categoryId);
     }
 }

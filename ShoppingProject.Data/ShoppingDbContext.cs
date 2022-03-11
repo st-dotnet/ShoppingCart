@@ -46,7 +46,7 @@ namespace ShoppingProject.Data
             {
                 entity.HasKey(e => e.Id);
                 entity.HasOne(d => d.ProductCategory)
-                .WithMany(p => p.products)
+                .WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId);
             });
 
